@@ -7,25 +7,17 @@ require "async_cable/version"
 Gem::Specification.new do |spec|
   spec.name        = "async_cable"
   spec.version     = AsyncCable::VERSION
-  spec.authors     = [""]
-  spec.email       = [""]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of AsyncCable."
-  spec.description = "TODO: Description of AsyncCable."
+  spec.authors     = ["Kang Zhang"]
+  spec.email       = ["piecehealth@sina.com"]
+  spec.homepage    = "https://github.com/piecehealth/async_cable"
+  spec.summary     = "Use async libary for broadcasting of ActionCable."
+  spec.description = "Use async libary for broadcasting of ActionCable."
   spec.license     = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
+  spec.add_dependency "rails", ">= 6.0.2.1"
+  spec.add_dependency "async", ">= 1.24.0"
 
   spec.add_development_dependency "sqlite3"
 end
